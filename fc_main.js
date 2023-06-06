@@ -795,7 +795,7 @@ function autoTicker() {
 
 function autoCast() {
   if (!M) return; // Just leave if you don't have grimoire
-  if (M.magic >= M.getSpellCost(spellsById[1])) {
+  if (M.magic >= M.getSpellCost(M.spellsById[1])) {
     if (
       cpsBonus() >= FrozenCookies.minCpSMult ||
       Game.hasBuff("Dragonflight") ||
