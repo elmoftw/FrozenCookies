@@ -207,7 +207,7 @@ FrozenCookies.preferenceValues = {
       "Harvesting during BUILDING SPECIAL",
       "Harvesting during FRENZY + BUILDING SPECIAL",
     ],
-    default: 0,
+    default: 3,
     extras:
       '<a class="option" id="maxSpecials" onclick="updateMaxSpecials(\'maxSpecials\');">${maxSpecials} Building specials</a>',
   },
