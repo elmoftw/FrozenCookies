@@ -206,15 +206,15 @@ function setOverrides(gameSaveData) {
       );
     });
     // Separate because these are user-input values
-    FrozenCookies.cookieClickSpeed = preferenceParse("cookieClickSpeed", 0);
-    FrozenCookies.frenzyClickSpeed = preferenceParse("frenzyClickSpeed", 0);
+    FrozenCookies.cookieClickSpeed = preferenceParse("cookieClickSpeed", 250);
+    FrozenCookies.frenzyClickSpeed = preferenceParse("frenzyClickSpeed", 250);
     FrozenCookies.HCAscendAmount = preferenceParse("HCAscendAmount", 0);
     FrozenCookies.minCpSMult = preferenceParse("minCpSMult", 1);
     FrozenCookies.maxSpecials = preferenceParse("maxSpecials", 1);
 
     // building max values
-    FrozenCookies.cursorMax = preferenceParse("cursorMax", 500);
-    FrozenCookies.farmMax = preferenceParse("farmMax", 500);
+    FrozenCookies.cursorMax = preferenceParse("cursorMax", 1000);
+    FrozenCookies.farmMax = preferenceParse("farmMax", 900);
     FrozenCookies.manaMax = preferenceParse("manaMax", 100);
 
     // Get historical data
