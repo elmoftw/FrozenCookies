@@ -138,7 +138,7 @@ FrozenCookies.preferenceValues = {
       "Auto Cast SPONTANEOUS EDIFICE",
       "Auto Cast HAGGLER'S CHARM (cheapest)",
     ],
-    default: 1,
+    default: 2,
     extras:
       '<a class="option" id="minCpSMult" onclick="updateCpSMultMin(\'minCpSMult\');">x${minCpSMult} minimum Frenzy</a>',
   },
