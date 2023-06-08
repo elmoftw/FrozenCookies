@@ -209,7 +209,7 @@ function setOverrides(gameSaveData) {
     FrozenCookies.cookieClickSpeed = preferenceParse("cookieClickSpeed", 250);
     FrozenCookies.frenzyClickSpeed = preferenceParse("frenzyClickSpeed", 250);
     FrozenCookies.HCAscendAmount = preferenceParse("HCAscendAmount", 0);
-    FrozenCookies.minCpSMult = preferenceParse("minCpSMult", 1);
+    FrozenCookies.minCpSMult = preferenceParse("minCpSMult", 10);
     FrozenCookies.maxSpecials = preferenceParse("maxSpecials", 1);
 
     // building max values
