@@ -13,24 +13,24 @@ FrozenCookies.preferenceValues = {
   autoFrenzy: {
     hint: "Click the large cookie during Clicking Frenzies",
     display: ["Autofrenzy OFF", "Autofrenzy ON"],
-    default: 0,
+    default: 1,
     extras:
       '<a class="option" id="frenzyClickSpeed" onclick="updateSpeed(\'frenzyClickSpeed\');">${frenzyClickSpeed} clicks/sec</a>',
   },
   autoGC: {
     hint: "Automatically click Golden Cookies when they appear",
     display: ["Autoclick GC OFF", "Autoclick GC ON"],
-    default: 0,
+    default: 1,
   },
   autoReindeer: {
     hint: "Automatically click reindeer",
     display: ["Autoclick Reindeer OFF", "Autoclick Reindeer ON"],
-    default: 0,
+    default: 1,
   },
   autoFortune: {
     hint: "Automatically click the news ticker when Fortune News appears",
     display: ["Auto Fortune OFF", "Auto Fortune ON"],
-    default: 0,
+    default: 1,
   },
 
   // autobuy options
@@ -66,14 +66,14 @@ FrozenCookies.preferenceValues = {
   cursorLimit: {
     hint: "Limit max number of cursors to keep Godzamok useful",
     display: ["Cursor Limit OFF", "Cursor Limit ON"],
-    default: 0,
+    default: 1,
     extras:
       '<a class="option" id="cursorMax" onclick="updateCursorMax(\'cursorMax\');">${cursorMax} Cursors</a>',
   },
   farmLimit: {
     hint: "Limit max number of farms to keep Godzamok useful",
     display: ["Farm Limit OFF", "Farm Limit ON"],
-    default: 0,
+    default: 1,
     extras:
       '<a class="option" id="farmMax" onclick="updateFarmMax(\'farmMax\');">${farmMax} Farms</a>',
   },
@@ -122,12 +122,12 @@ FrozenCookies.preferenceValues = {
   autoGS: {
     hint: "Automatically turn on the Golden Switch during Dragonflight and Click Frenzy (and turn back off at the end)",
     display: ["Auto-GS-Switch OFF", "Auto-GS-Switch ON"],
-    default: 0,
+    default: 1,
   },
   autoGodzamok: {
     hint: "Automatically sell all cursors and farms (except one farm) during Dragonflight and Click Frenzy if you worship Godzamok and prevents rapid buy/sell spam",
     display: ["Auto-Godzamok OFF", "Auto-Godzamok ON"],
-    default: 0,
+    default: 1,
   },
   autoSpell: {
     hint: "Automatically cast selected spell when your mana is full",
@@ -138,7 +138,7 @@ FrozenCookies.preferenceValues = {
       "Auto Cast SPONTANEOUS EDIFICE",
       "Auto Cast HAGGLER'S CHARM (cheapest)",
     ],
-    default: 0,
+    default: 1,
     extras:
       '<a class="option" id="minCpSMult" onclick="updateCpSMultMin(\'minCpSMult\');">x${minCpSMult} minimum Frenzy</a>',
   },
