@@ -213,8 +213,10 @@ function setOverrides(gameSaveData) {
     FrozenCookies.maxSpecials = preferenceParse("maxSpecials", 1);
 
     // building max values
-    FrozenCookies.cursorMax = preferenceParse("cursorMax", 1000);
-    FrozenCookies.farmMax = preferenceParse("farmMax", 900);
+    FrozenCookies.cursorMax = preferenceParse("cursorMax", 700);
+    FrozenCookies.farmMax = preferenceParse("farmMax", 700);
+    FrozenCookies.mineMax = preferenceParse("mineMax", 700);
+    FrozenCookies.factoryMax = preferenceParse("factoryMax", 700);
     FrozenCookies.manaMax = preferenceParse("manaMax", 100);
 
     // Get historical data
@@ -468,6 +470,8 @@ function saveFCData() {
   saveString.HCAscendAmount = FrozenCookies.HCAscendAmount;
   saveString.cursorMax = FrozenCookies.cursorMax;
   saveString.farmMax = FrozenCookies.farmMax;
+  saveString.mineMax = FrozenCookies.mineMax;
+  saveString.factoryMax = FrozenCookies.factoryMax;
   saveString.minCpSMult = FrozenCookies.minCpSMult;
   saveString.frenzyTimes = JSON.stringify(FrozenCookies.frenzyTimes);
   //  saveString.nonFrenzyTime = FrozenCookies.non_gc_time;
@@ -657,6 +661,26 @@ function updateFarmMax(base) {
     userInputPrompt(
         'Farm Cap!',
         'How many Farms should Autobuy stop at?',
+        FrozenCookies[base],
+        storeNumberCallback(base, 0)
+    );
+
+}
+
+function updateMineMax(base) {
+    userInputPrompt(
+        'Mine Cap!',
+        'How many Mines should Autobuy stop at?',
+        FrozenCookies[base],
+        storeNumberCallback(base, 0)
+    );
+
+}
+
+function updateFactoryMax(base) {
+    userInputPrompt(
+        'Factory Cap!',
+        'How many Factories should Autobuy stop at?',
         FrozenCookies[base],
         storeNumberCallback(base, 0)
     );
@@ -1766,6 +1790,20 @@ function buildingStats(recalculate) {
         Game.Objects["Farm"].amount >= FrozenCookies.farmMax
       ) {
         buildingBlacklist.push(2);
+      }
+      //Stop buying Mines if at set limit
+      if (
+        FrozenCookies.mineLimit &&
+        Game.Objects["Mine"].amount >= FrozenCookies.MineMax
+      ) {
+        buildingBlacklist.push(3);
+      }
+      //Stop buying Factories if at set limit
+      if (
+        FrozenCookies.factoryLimit &&
+        Game.Objects["Factory"].amount >= FrozenCookies.factoryMax
+      ) {
+        buildingBlacklist.push(4);
       }
       FrozenCookies.caches.buildings = Game.ObjectsById.map(function (
         current,
