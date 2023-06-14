@@ -2775,15 +2775,14 @@ function autoGodzamokAction() {
         Game.Objects["Farm"].sell(countFarm);
         Game.Objects["Mine"].sell(countMine);
         Game.Objects["Factory"].sell(countFactory);
-        logEvent("Click Buff:", ClickBuffBonus());
 
         //if (FrozenCookies.autoBuy == 1) {
-          safeBuy(Game.Objects["Farm"], countFarm);
-          logEvent("AutoGodzamok", "Bought " + countFarm + " farms");
-          safeBuy(Game.Objects["Mine"], countMine);
-          logEvent("AutoGodzamok", "Bought " + countMine + " mines");
-          safeBuy(Game.Objects["Factory"], countFactory);
-          logEvent("AutoGodzamok", "Bought " + countFactory + " factories");
+        safeBuy(Game.Objects["Farm"], countFarm);
+        logEvent("AutoGodzamok", "Bought " + countFarm + " farms");
+        safeBuy(Game.Objects["Mine"], countMine);
+        logEvent("AutoGodzamok", "Bought " + countMine + " mines");
+        safeBuy(Game.Objects["Factory"], countFactory);
+        logEvent("AutoGodzamok", "Bought " + countFactory + " factories");
         //}
       }
     }
