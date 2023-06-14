@@ -2775,9 +2775,9 @@ function autoGodzamokAction() {
         Game.Objects["Farm"].sell(countFarm);
         Game.Objects["Mine"].sell(countMine);
         Game.Objects["Factory"].sell(countFactory);
+        logEvent("Click Buff:", ClickBuffBonus());
 
         //if (FrozenCookies.autoBuy == 1) {
-          logEvent("Click Buff:", ClickBuffBonus());
           safeBuy(Game.Objects["Farm"], countFarm);
           logEvent("AutoGodzamok", "Bought " + countFarm + " farms");
           safeBuy(Game.Objects["Mine"], countMine);
